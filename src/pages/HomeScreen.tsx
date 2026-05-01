@@ -48,14 +48,17 @@ export const HomeScreen = () => {
       <header className="px-5 pt-4 pb-5 text-primary-foreground relative">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm opacity-80">Good morning,</p>
-            <h1 className="font-display text-xl font-bold">James Kato 👋</h1>
+            <p className="text-sm opacity-85">Good morning,</p>
+            <h1 className="font-display text-2xl font-bold leading-tight">James Kato</h1>
           </div>
-          <div className="relative">
-            <div className="w-11 h-11 rounded-2xl glass grid place-items-center text-lg font-bold">
-              JK
-            </div>
-            <span className="absolute -top-0.5 -right-0.5 w-3 h-3 rounded-full bg-accent border-2 border-primary-deep" />
+          <div className="flex items-center gap-2">
+            <button className="relative w-11 h-11 rounded-full glass grid place-items-center" aria-label="Notifications">
+              <Bell className="w-5 h-5" />
+              <span className="absolute top-2 right-2.5 w-2 h-2 rounded-full bg-accent" />
+            </button>
+            <button className="w-11 h-11 rounded-full glass grid place-items-center" aria-label="Profile">
+              <User className="w-5 h-5" />
+            </button>
           </div>
         </div>
       </header>
