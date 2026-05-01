@@ -71,10 +71,12 @@ export const HomeScreen = () => {
       {/* Quick actions */}
       <div className="px-5 mt-5 flex justify-between">
         {quickActions.map(({ icon: Icon, label, primary }) => (
-          <button key={label} className="flex flex-col items-center gap-1.5 group">
+          <button key={label} className="flex flex-col items-center gap-2 group">
             <span
-              className={`w-12 h-12 rounded-2xl grid place-items-center transition-transform group-active:scale-95 ${
-                primary ? "gradient-hero text-primary-foreground shadow-glow" : "bg-card border border-border shadow-soft text-foreground"
+              className={`w-14 h-14 rounded-full grid place-items-center transition-transform group-active:scale-95 ${
+                primary
+                  ? "bg-primary text-primary-foreground shadow-glow"
+                  : "bg-card border border-border shadow-soft text-foreground"
               }`}
             >
               <Icon className="w-5 h-5" />
