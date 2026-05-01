@@ -3,7 +3,7 @@ import { StatusBar } from "@/components/StatusBar";
 import { WalletCard } from "@/components/WalletCard";
 import {
   Plus, Send, Download, MoreHorizontal, TrendingUp, Zap, Droplet, Wifi,
-  Tv, GraduationCap, ChevronRight, ArrowUpRight, ArrowDownLeft, Gift, Sparkles,
+  Tv, GraduationCap, ChevronRight, ArrowUpRight, ArrowDownLeft, Gift, Sparkles, Bell, User,
 } from "lucide-react";
 
 const quickActions = [
