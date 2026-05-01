@@ -11,12 +11,14 @@ export const WalletCard = () => {
       <div className="absolute inset-0 animate-shimmer pointer-events-none" />
 
       <div className="relative flex items-start justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-9 h-9 rounded-full bg-destructive/90" />
-          <div className="w-9 h-9 rounded-full bg-accent-soft -ml-5 mix-blend-screen" />
+        {/* Mastercard-style overlapping circles */}
+        <div className="flex items-center">
+          <div className="w-10 h-10 rounded-full bg-[hsl(0_84%_55%)]" />
+          <div className="w-10 h-10 rounded-full bg-[hsl(45_100%_55%)] -ml-5 mix-blend-multiply" />
         </div>
-        <div className="font-display font-bold text-lg tracking-tight">
-          SBC<span className="font-medium opacity-80">Pay</span>
+        <div className="font-display font-bold text-xl tracking-tight">
+          <span className="text-white">SBC</span>
+          <span className="text-[hsl(218_92%_56%)]">Pay</span>
         </div>
       </div>
 
