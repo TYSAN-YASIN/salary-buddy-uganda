@@ -3,7 +3,7 @@ import { StatusBar } from "@/components/StatusBar";
 import { WalletCard } from "@/components/WalletCard";
 import {
   Plus, Send, Download, MoreHorizontal, TrendingUp, Zap, Droplet, Wifi,
-  Tv, GraduationCap, ChevronRight, ArrowUpRight, ArrowDownLeft, Gift, Sparkles,
+  Tv, GraduationCap, ChevronRight, ArrowUpRight, ArrowDownLeft, Gift, Sparkles, Bell, User,
 } from "lucide-react";
 
 const quickActions = [
@@ -48,14 +48,17 @@ export const HomeScreen = () => {
       <header className="px-5 pt-4 pb-5 text-primary-foreground relative">
         <div className="flex items-center justify-between">
           <div>
-            <p className="text-sm opacity-80">Good morning,</p>
-            <h1 className="font-display text-xl font-bold">James Kato 👋</h1>
+            <p className="text-sm opacity-85">Good morning,</p>
+            <h1 className="font-display text-2xl font-bold leading-tight">James Kato</h1>
           </div>
-          <div className="relative">
-            <div className="w-11 h-11 rounded-2xl glass grid place-items-center text-lg font-bold">
-              JK
-            </div>
-            <span className="absolute -top-0.5 -right-0.5 w-3 h-3 rounded-full bg-accent border-2 border-primary-deep" />
+          <div className="flex items-center gap-2">
+            <button className="relative w-11 h-11 rounded-full glass grid place-items-center" aria-label="Notifications">
+              <Bell className="w-5 h-5" />
+              <span className="absolute top-2 right-2.5 w-2 h-2 rounded-full bg-accent" />
+            </button>
+            <button className="w-11 h-11 rounded-full glass grid place-items-center" aria-label="Profile">
+              <User className="w-5 h-5" />
+            </button>
           </div>
         </div>
       </header>
@@ -68,10 +71,12 @@ export const HomeScreen = () => {
       {/* Quick actions */}
       <div className="px-5 mt-5 flex justify-between">
         {quickActions.map(({ icon: Icon, label, primary }) => (
-          <button key={label} className="flex flex-col items-center gap-1.5 group">
+          <button key={label} className="flex flex-col items-center gap-2 group">
             <span
-              className={`w-12 h-12 rounded-2xl grid place-items-center transition-transform group-active:scale-95 ${
-                primary ? "gradient-hero text-primary-foreground shadow-glow" : "bg-card border border-border shadow-soft text-foreground"
+              className={`w-14 h-14 rounded-full grid place-items-center transition-transform group-active:scale-95 ${
+                primary
+                  ? "bg-primary text-primary-foreground shadow-glow"
+                  : "bg-card border border-border shadow-soft text-foreground"
               }`}
             >
               <Icon className="w-5 h-5" />
